@@ -1,2 +1,32 @@
 https://datasecurity.viettel.vn/s/svfBwu1CoYnfaGg/ccspmservice-1-0-2-jar
 https://datasecurity.viettel.vn/s/hTk2lwMJy298ss5/nims-bccs2-cdbr-infra-1-0-2-jar
+
+
+http://10.240.232.69:8060/QLCTKT/rest/stationInOutRegController/getStationCode
+- param deptCode
+{"data":"[\"KTM8001\",\"KTM0029\",\"KTM0162\",\"KTM0047\",\"KTM0203\",\"KTM0032\",\"KTM0170\",\"KTM0018\",\"KTM0030\",\"KTM0144\",\"KTM0054\",\"KTM0121\",\"KTM0085\",\"KTM0137\",\"KTM0050\",\"KTM0176\",\"KTM0177\",\"KTM0096\",\"KTM0052\",\"KTM0171\",\"KTM0087\",\"KTM0097\",\"KTM0120\",\"KTM0136\",\"KTM0188\",\"KTM0044\",\"KTM0001\",\"KTM5005\",\"KTM0098\",\"KTM0039\",\"KTM0193\",\"KTM0196\",\"KTM0007\",\"KTM5004\",\"KTM0135\",\"KTMA001\",\"KTM0200\",\"KTM0195\",\"KTM0049\",\"KTM0113\",\"KTM0133\",\"KTM0016\",\"KTM0125\",\"KTM0143\",\"KTM0105\",\"KTM0041\",\"KTM0022\",\"KTM0026\",\"KTM0023\",\"KTM0043\",\"KTM0159\",\"KTM0099\",\"KTM0157\",\"KTM3976\",\"KTM3993\",\"KTM3971\",\"KTM3958\",\"KTM3988\",\"KTM3997\",\"KTM0219\",\"KTM0220\",\"KTM0052-11\",\"KTM0120-11\"]","status":"OK"}
+
+http://10.240.232.69:8060/QLCTKT/rest/connectorController/getConnectorCode
+- param stationCode
+{"data":["ANC0001-FN03-DN01-SN01"]}
+
+taskToolController/getSplitterBySubNode
+Param inputForm = {
+	"oltType":1,
+	"serviceType":1,
+	"subNodeCode":"subNodeCode",
+	"subNodeId":1
+}
+
+
+taskToolController/getListSeriesCause
+- param cause ={
+    "causeId":1,
+	"causeLevel":1,
+	"name":"subNodeCode",
+	"code":"code",
+	"parentId":1,
+	"status":0,
+}
+
+GNOCWOController/updateStatus dung ham cu.
